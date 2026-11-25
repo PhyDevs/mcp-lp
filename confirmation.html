@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmation | ekvip TwinCAT MCP Server</title>
+  <link rel="stylesheet" href="confirmation.css">
+  <script src="confirmation.js" defer></script>
+</head>
+<body>
+  <header class="order-header">
+    <div class="order-shell"><span class="order-brand">ekvip<span>.</span></span><span>Software checkout</span></div>
+  </header>
+  <main class="order-shell order-main">
+    <p class="prototype">Test checkout · No charge, email or MSI installer</p>
+    <div class="order-grid">
+      <section class="order-primary" aria-labelledby="order-title">
+        <div class="order-intro">
+          <span class="status-icon" id="status-icon" aria-hidden="true">…</span>
+          <div role="status" aria-atomic="true">
+            <h1 id="order-title">Checking your order</h1>
+            <p id="order-message">Looking for a test payment in this browser tab.</p>
+          </div>
+          <noscript><p>Enable JavaScript to view the simulated order status.</p></noscript>
+          <div id="paid-actions" hidden>
+            <a class="order-button" id="download" download="ekvip-mcp-download-demo.txt">Download Windows MSI <span aria-hidden="true">↓</span></a>
+            <p class="supporting">Windows installer (.msi) · In this demo, the button downloads a sample text file.</p>
+            <div class="download-alert" id="download-alert" hidden>
+              <p role="status" id="download-error"></p>
+              <button type="button" class="order-button" id="retry-download">Retry download</button>
+            </div>
+            <p class="supporting" id="download-status" role="status"></p>
+            <button type="button" id="download-again" class="text-button" hidden>Download again</button>
+          </div>
+          <a class="order-button" id="return-to-checkout" href="mcp.html#purchase" hidden>Return to checkout</a>
+          <a class="recovery-link" id="recovery-link" href="#recovery">Recover your download link</a>
+        </div>
+        <section class="install" id="install" aria-labelledby="install-title" hidden>
+          <h2 id="install-title">Install and connect</h2>
+          <ol>
+            <li><strong>Download the MSI.</strong> Save it to your Windows engineering workstation.</li>
+            <li><strong>Run the installer.</strong> Open the MSI and follow the setup wizard.</li>
+            <li><strong>Connect your AI assistant.</strong> Configure your supported MCP client on the workstation.</li>
+          </ol>
+          <details class="quick-start">
+            <summary>Quick-start guide</summary>
+            <p>Use a development or controlled test workstation. Have TwinCAT 3 and a supported MCP client available, then follow the installer prompts and configure the client using the settings provided with the release. Start with a test project and review any AI-assisted changes before use.</p>
+            <p class="supporting">Prototype guide. Supported versions and client-specific settings are pending verification.</p>
+          </details>
+        </section>
+      </section>
+      <aside class="order-summary" aria-labelledby="summary-title" id="order-summary" hidden>
+        <h2 id="summary-title">Order summary</h2>
+        <p class="summary-product">ekvip TwinCAT MCP Server</p>
+        <dl>
+          <div><dt>Test order</dt><dd id="order-id"></dd></div>
+          <div><dt>Subscription</dt><dd>€29.99 / month</dd></div>
+          <div><dt>Charged</dt><dd>€0.00 (test)</dd></div>
+        </dl>
+        <p class="receipt" id="receipt" role="status"></p>
+      </aside>
+    </div>
+    <div class="order-help">
+      <section id="recovery" aria-labelledby="recovery-title">
+        <h2 id="recovery-title">Recover your download link</h2>
+        <p>Enter the email address you used at checkout. In live checkout, we’ll send a fresh link for an eligible order.</p>
+        <form id="recovery-form">
+          <label for="recovery-email">Order email address</label>
+          <div class="recovery-fields">
+            <input id="recovery-email" type="email" placeholder="engineer@example.com" autocomplete="off" required>
+            <button type="submit" class="order-button">Request link</button>
+          </div>
+        </form>
+        <p class="supporting" id="recovery-status" role="status"></p>
+      </section>
+      <section aria-labelledby="support-title">
+        <h2 id="support-title">Need help?</h2>
+        <p>Contact ekvip for checkout, installer or licensing help. Include your order reference if you have one.</p>
+        <a href="https://ekvip.com/en">Contact ekvip via the corporate website</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

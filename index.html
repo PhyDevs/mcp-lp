@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ekvip MCP Server announcement</title>
+  <style>
+    :root {
+      --page-blue: #225f79;
+      --deep-blue: #112f44;
+      --gold: #d6a35f;
+      --muted-text: #e0eaf0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: var(--page-blue);
+      background-image: linear-gradient(145deg, transparent 25%, #113a4b 100%);
+      font-family: system-ui, sans-serif;
+    }
+
+    .announcement {
+      border-bottom: 1px solid rgb(255 255 255 / 15%);
+      background: var(--deep-blue);
+      color: #fff;
+    }
+
+    .announcement__inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 0.875rem;
+      max-width: 80rem;
+      margin-inline: auto;
+      padding: 0.5rem clamp(1rem, 3vw, 2rem);
+    }
+
+    .announcement__message {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 0.875rem;
+      row-gap: 0.125rem;
+      border-inline-start: 2px solid var(--gold);
+      padding-inline-start: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .announcement__message strong {
+      font-weight: 650;
+    }
+
+    .announcement__message p {
+      margin: 0;
+      color: var(--muted-text);
+    }
+
+    .announcement__cta,
+    .announcement__dismiss {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      border-radius: 0.25rem;
+    }
+
+    .announcement__cta {
+      gap: 0.625rem;
+      padding: 0.375rem 0.875rem;
+      background: var(--gold);
+      color: var(--deep-blue);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .announcement__cta:hover {
+      background: #e6b699;
+    }
+
+    .announcement__dismiss {
+      width: 2.75rem;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--muted-text);
+      cursor: pointer;
+      font: inherit;
+      font-size: 1.375rem;
+    }
+
+    .announcement__dismiss:hover {
+      background: rgb(255 255 255 / 12%);
+    }
+
+    .announcement :focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 38rem) {
+      .announcement__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 0.625rem;
+        padding-block: 0.75rem;
+      }
+
+      .announcement__cta {
+        grid-row: 2;
+        justify-self: start;
+        margin-inline-start: 0.875rem;
+      }
+
+      .announcement__dismiss {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="site-header.css">
+</head>
+<body>
+  <aside class="announcement" aria-label="Product announcement">
+    <div class="announcement__inner">
+      <div class="announcement__message">
+        <strong>Introducing the ekvip MCP Server</strong>
+        <p>Connect compatible AI assistants to your tools and data.</p>
+      </div>
+      <a class="announcement__cta" href="mcp.html">
+        Discover MCP Server <span aria-hidden="true">→</span>
+      </a>
+      <button class="announcement__dismiss" type="button" aria-label="Dismiss product announcement">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+  </aside>
+<header class="ekvip-header">
+  <div class="ekvip-header__inner">
+    <a class="ekvip-header__brand" href="index.html" aria-label="ekvip home">
+      <span aria-hidden="true">ekvip</span><span class="ekvip-header__mark" aria-hidden="true"></span>
+    </a>
+    <nav class="ekvip-header__nav" aria-label="Main navigation">
+      <details name="ekvip-navigation">
+        <summary>Portfolio</summary>
+        <div class="ekvip-header__panel">
+          <a href="https://ekvip.com/en/portfolio">Portfolio overview</a>
+          <a href="mcp.html">TwinCAT MCP Server</a>
+        </div>
+      </details>
+      <a href="https://ekvip.com/en/cinnamon">cinnamon</a>
+      <details name="ekvip-navigation">
+        <summary>Knowledge</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/knowledge">Knowledge overview</a></div>
+      </details>
+      <details name="ekvip-navigation">
+        <summary>About us</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/about-us">About ekvip</a></div>
+      </details>
+      <details name="ekvip-navigation">
+        <summary>Career</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/career">Career overview</a></div>
+      </details>
+    </nav>
+    <div class="ekvip-header__tools">
+      <a href="https://ekvip.com/de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
+      <span aria-hidden="true">|</span>
+      <span class="ekvip-header__language" aria-label="English">EN</span>
+      <details class="ekvip-header__search" name="ekvip-navigation">
+        <summary aria-label="Search"><span class="ekvip-header__lens" aria-hidden="true"></span></summary>
+        <form class="ekvip-header__panel" action="https://www.google.com/search" method="get" role="search" aria-label="Search ekvip">
+          <input type="hidden" name="as_sitesearch" value="ekvip.com">
+          <label>Search ekvip <input type="search" name="q" required></label>
+          <button type="submit">Search</button>
+        </form>
+      </details>
+    </div>
+  </div>
+</header>
+  <script>
+    const announcement = document.querySelector('.announcement');
+
+    announcement.querySelector('.announcement__dismiss').addEventListener('click', () => {
+      announcement.hidden = true;
+    });
+  </script>
+</body>
+</html>

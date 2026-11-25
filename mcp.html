@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ekvip TwinCAT MCP Server</title>
+<link rel="stylesheet" href="mcp.css">
+<script src="mcp.js" defer></script>
+<link rel="stylesheet" href="site-header.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="ekvip-header">
+  <div class="ekvip-header__inner">
+    <a class="ekvip-header__brand" href="index.html" aria-label="ekvip home">
+      <span aria-hidden="true">ekvip</span><span class="ekvip-header__mark" aria-hidden="true"></span>
+    </a>
+    <nav class="ekvip-header__nav" aria-label="Main navigation">
+      <details name="ekvip-navigation">
+        <summary>Portfolio</summary>
+        <div class="ekvip-header__panel">
+          <a href="https://ekvip.com/en/portfolio">Portfolio overview</a>
+          <a href="mcp.html">TwinCAT MCP Server</a>
+        </div>
+      </details>
+      <a href="https://ekvip.com/en/cinnamon">cinnamon</a>
+      <details name="ekvip-navigation">
+        <summary>Knowledge</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/knowledge">Knowledge overview</a></div>
+      </details>
+      <details name="ekvip-navigation">
+        <summary>About us</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/about-us">About ekvip</a></div>
+      </details>
+      <details name="ekvip-navigation">
+        <summary>Career</summary>
+        <div class="ekvip-header__panel"><a href="https://ekvip.com/en/career">Career overview</a></div>
+      </details>
+    </nav>
+    <div class="ekvip-header__tools">
+      <a href="https://ekvip.com/de" lang="de" hreflang="de" aria-label="Deutsch">DE</a>
+      <span aria-hidden="true">|</span>
+      <span class="ekvip-header__language" aria-label="English">EN</span>
+      <details class="ekvip-header__search" name="ekvip-navigation">
+        <summary aria-label="Search"><span class="ekvip-header__lens" aria-hidden="true"></span></summary>
+        <form class="ekvip-header__panel" action="https://www.google.com/search" method="get" role="search" aria-label="Search ekvip">
+          <input type="hidden" name="as_sitesearch" value="ekvip.com">
+          <label>Search ekvip <input type="search" name="q" required></label>
+          <button type="submit">Search</button>
+        </form>
+      </details>
+    </div>
+  </div>
+</header>
+<main class="shell layout" id="content">
+  <div class="product">
+    <section class="hero" aria-labelledby="headline">
+      <p class="eyebrow">NEW RELEASE — INDUSTRIAL AI</p>
+      <p class="product-name">ekvip TwinCAT MCP Server</p>
+      <h1 id="headline">AI-powered engineering for TwinCAT 3.</h1>
+      <p class="intro">Connect your AI assistant to your Beckhoff TwinCAT environment. Develop PLC software, understand complex projects and simplify everyday engineering tasks through natural language.</p>
+      <ul class="specs"><li>TwinCAT 3</li><li>Local Windows installation</li><li>MCP-compatible AI integration</li></ul>
+    </section>
+
+    <section class="demo" aria-labelledby="demo-title">
+      <div class="demo-top"><h2 id="demo-title">Inside a TwinCAT engineering session</h2><span>Illustrative demo</span></div>
+      <div class="demo-body">
+        <div class="conversation">
+          <p class="label">Engineer</p>
+          <blockquote>“Analyze my PLC project and explain how the conveyor state machine works.”</blockquote>
+          <p class="label">AI assistant</p>
+          <p>I’ve identified the conveyor control function block. Here’s an overview of its states and transitions.</p>
+          <ul class="progress"><li>PLC project structure analyzed</li><li>Function block inspected</li><li>State transitions identified</li><li>Engineering summary generated</li></ul>
+        </div>
+        <div class="inspector">
+          <p class="label">FB_ConveyorControl</p>
+          <div class="states" role="group" aria-label="Illustrative conveyor states">
+            <button type="button" aria-pressed="true" data-state="Idle · The test sequence is waiting for a start request.">Idle</button>
+            <span aria-hidden="true">↓</span>
+            <button type="button" aria-pressed="false" data-state="Running · The test sequence is active.">Running</button>
+            <span aria-hidden="true">↓</span>
+            <button type="button" aria-pressed="false" data-state="Stopped · The test sequence has ended.">Stopped</button>
+          </div>
+          <p class="state-note" id="state-note" aria-live="polite">Idle · The test sequence is waiting for a start request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Spend less time on repetitive engineering tasks.</h2>
+      <p>Bring AI assistance into your existing TwinCAT workflow and focus on solving engineering problems.</p>
+      <div class="benefits">
+        <div><h3>Accelerate PLC development</h3><p>Use natural language to draft and refine PLC software and reusable function blocks.</p></div>
+        <div><h3>Understand complex projects</h3><p>Explore project structures and get explanations of unfamiliar automation logic.</p></div>
+        <div><h3>Simplify troubleshooting</h3><p>Investigate compilation errors and identify potential issues for engineering review.</p></div>
+        <div><h3>Reduce repetitive engineering work</h3><p>Assist with recurring documentation, configuration and maintenance tasks.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="capabilities">
+      <h2>Your TwinCAT workflow, enhanced by AI.</h2>
+      <p class="review-note">Provisional capabilities. Availability is subject to engineering verification.</p>
+      <dl class="capabilities">
+        <div><dt>PLC programming</dt><dd>Work with Structured Text programs, function blocks, methods, interfaces and data types.</dd></div>
+        <div><dt>Project navigation and analysis</dt><dd>Find components, inspect dependencies and understand existing code.</dd></div>
+        <div><dt>Build and diagnostics</dt><dd>Assist with syntax validation, compilation and error analysis.</dd></div>
+        <div><dt>Library management</dt><dd>Inspect dependencies and work with TwinCAT library references.</dd></div>
+        <div><dt>Tasks and configuration</dt><dd>Review PLC task configuration and program assignments.</dd></div>
+        <div><dt>I/O engineering</dt><dd>Explore hardware topology and PLC variable mapping where supported.</dd></div>
+        <div><dt>Runtime diagnostics</dt><dd>Inspect test-environment PLC variables over ADS where supported.</dd></div>
+        <div><dt>AI integration</dt><dd>Connect supported AI assistants through the Model Context Protocol.</dd></div>
+      </dl>
+    </section>
+
+    <section class="content-section">
+      <h2>What could you accomplish with TwinCAT MCP?</h2>
+      <p>Illustrative prompts and results for engineering review.</p>
+      <div class="accordion prompts">
+        <details open><summary>Understand an existing project</summary><blockquote>“Give me an overview of this PLC project and explain the responsibilities of its main function blocks.”</blockquote><p><strong>Example result</strong> · A project map with a summary of each block’s role.</p></details>
+        <details><summary>Develop reusable PLC code</summary><blockquote>“Create a reusable Structured Text function block for debouncing a digital input.”</blockquote><p><strong>Example result</strong> · A draft function block to review and test.</p></details>
+        <details><summary>Investigate compilation issues</summary><blockquote>“Analyze the current build errors and suggest appropriate corrections.”</blockquote><p><strong>Example result</strong> · A list of build errors with suggested fixes for review.</p></details>
+        <details><summary>Document existing software</summary><blockquote>“Explain the behavior of this conveyor control function block and draft its technical documentation.”</blockquote><p><strong>Example result</strong> · A draft describing the block’s inputs, outputs and state transitions.</p></details>
+        <details><summary>Review project dependencies</summary><blockquote>“Show me which libraries this PLC project uses and summarize their purpose.”</blockquote><p><strong>Example result</strong> · A dependency inventory with a description of each library.</p></details>
+        <details><summary>Investigate runtime behavior</summary><blockquote>“Inspect the relevant diagnostic variables in my test environment and summarize their current values.”</blockquote><p><strong>Example result</strong> · A snapshot of selected test-environment values.</p></details>
+      </div>
+    </section>
+
+    <section class="content-section" id="compatibility">
+      <h2>Works with your engineering environment.</h2>
+      <dl class="capabilities">
+        <div><dt>Engineering platform</dt><dd>Beckhoff TwinCAT 3. Supported builds pending verification.</dd></div>
+        <div><dt>Operating system</dt><dd>Windows. Supported versions and installation prerequisites pending verification.</dd></div>
+        <div><dt>AI clients to verify</dt><dd>Claude Code, GitHub Copilot CLI, Cursor, OpenAI Codex and other MCP clients.</dd></div>
+      </dl>
+    </section>
+
+    <section class="content-section" id="installation">
+      <h2>From purchase to engineering in three steps.</h2>
+      <ol class="steps">
+        <li><strong>Purchase and download</strong><p>Complete checkout on this page and download the Windows MSI after payment.</p></li>
+        <li><strong>Install locally</strong><p>Run the installer on your engineering workstation and follow the installation wizard.</p></li>
+        <li><strong>Connect your AI assistant</strong><p>Follow the configuration guide for your supported MCP client.</p></li>
+      </ol>
+      <p>No website account or password is required in the planned purchase flow.</p>
+      <a href="#documentation">Installation and configuration guide</a>
+      <p class="review-note" id="documentation" tabindex="-1">Documentation placeholder · The ekvip installation guide is pending.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Designed for professional engineering environments.</h2>
+      <p>The server is designed to be installed locally on a Windows workstation. The connected AI assistant may send engineering information to its provider for remote processing.</p>
+      <p class="engineering-note">Evaluate AI-assisted changes in development and controlled test environments. AI-assisted changes must be reviewed, validated and tested by qualified engineers before use in production systems.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="accordion">
+        <details><summary>What is the ekvip TwinCAT MCP Server?</summary><p>A locally installed integration designed to connect compatible AI assistants to TwinCAT.</p></details>
+        <details><summary>Do I need an account?</summary><p>The planned purchase and download flow requires no website account.</p></details>
+        <details><summary>How do I receive the software?</summary><p>The planned flow provides an MSI download after successful payment and sends a receipt and recovery link by email.</p></details>
+        <details><summary>Which TwinCAT versions are supported?</summary><p>Exact supported TwinCAT 3 builds are pending verification.</p></details>
+        <details><summary>Which AI assistants can I use?</summary><p>See the <a href="#compatibility">compatibility section</a> for clients awaiting verification.</p></details>
+        <details><summary>Does the software run locally?</summary><p>The server is designed for local Windows installation. Your AI client may process data remotely.</p></details>
+        <details><summary>Does the purchase include an AI subscription?</summary><p>Any AI client or provider subscription is separate from the proposed ekvip license. Confirm your client’s requirements before purchase.</p></details>
+        <details><summary>Can I use this with production machinery?</summary><p>Qualified engineers must review, validate and test AI-assisted changes. Follow the final product guidance and your organization’s engineering procedures.</p></details>
+        <details><summary>What is included in my license?</summary><p>The license is billed monthly. Included features, updates and support terms are pending confirmation.</p></details>
+        <details><summary>Can my company receive an invoice?</summary><p>Business purchasing and invoicing options are pending confirmation.</p></details>
+      </div>
+    </section>
+  </div>
+
+  <aside class="purchase" id="purchase" aria-labelledby="purchase-title" tabindex="-1">
+    <div class="purchase-heading">
+      <p class="eyebrow">CHECKOUT PROTOTYPE</p>
+      <h2 id="purchase-title">ekvip TwinCAT MCP Server</h2>
+      <p class="price">€29.99 <span>/ month</span></p>
+      <p class="license">Monthly software subscription</p>
+    </div>
+    <form id="checkout" aria-describedby="test-notice">
+      <p class="test-notice" id="test-notice">Simulated checkout with prefilled test card details. Use a test email.</p>
+      <label for="order-email">Email address</label>
+      <input id="order-email" type="email" placeholder="engineer@example.com" autocomplete="off" required aria-describedby="email-help">
+      <small id="email-help">Your receipt and download link will be sent to this address in live checkout.</small>
+      <fieldset class="card-details" aria-describedby="test-notice">
+        <legend>Card details</legend>
+        <div class="card-field">
+          <label for="card-number">Card number</label>
+          <div class="field-with-icon">
+            <input id="card-number" type="text" value="4242 4242 4242 4242" readonly>
+            <span class="test-card-brand" aria-hidden="true">VISA</span>
+          </div>
+        </div>
+        <div class="card-fields-row">
+          <div class="card-field">
+            <label for="card-expiration">Expiration date</label>
+            <input id="card-expiration" type="text" value="12 / 30" readonly>
+          </div>
+          <div class="card-field">
+            <label for="card-code">Security code</label>
+            <div class="field-with-icon">
+              <input id="card-code" type="text" value="123" readonly>
+              <span class="security-code-icon" aria-hidden="true">123</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <label for="billing-country">Country</label>
+      <div class="country-select">
+        <select id="billing-country" required>
+          <option value="">Select a country</option>
+          <option value="DE">Germany</option>
+          <option value="AT">Austria</option>
+          <option value="CH">Switzerland</option>
+          <option value="GB">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="other">Other country</option>
+        </select>
+      </div>
+      <dl class="totals"><div><dt>Monthly subscription</dt><dd>€29.99 / month</dd></div><div><dt>Applicable taxes</dt><dd>Calculated in live checkout</dd></div></dl>
+      <label class="agreement"><input type="checkbox" required><span>I accept the <a href="#test-terms">prototype purchase and license terms</a>.</span></label>
+      <details class="test-scenarios">
+        <summary>Choose a test scenario</summary>
+        <label for="test-scenario">Checkout outcome</label>
+        <select id="test-scenario">
+          <option value="success">Successful payment</option>
+          <option value="processing">Payment processing</option>
+          <option value="failed">Payment failed</option>
+          <option value="cancelled">Payment cancelled</option>
+          <option value="unavailable">Download temporarily unavailable</option>
+          <option value="email-pending">Receipt email pending</option>
+        </select>
+      </details>
+      <button class="pay" type="submit">Pay &amp; Download <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="purchase-notes">Secure checkout planned · Windows MSI after payment · No website account required</p>
+    <details id="test-terms"><summary>Prototype terms</summary><p>This test creates no order or license, charges no money and sends no email.</p></details>
+    <a class="purchase-contact" href="#purchasing-contact">Licensing, purchasing or invoice questions?</a>
+  </aside>
+</main>
+<footer class="site-footer" id="purchasing-contact">
+  <div class="shell footer-inner"><a class="brand" href="index.html" aria-label="ekvip home">ekvip<span>.</span></a>
+  <p>Purchasing and licensing enquiries · <a href="https://ekvip.com/en">Visit ekvip</a></p>
+  <small>Product and checkout prototype</small></div>
+</footer>
+<div class="mobile-purchase"><span>€29.99 <small>per month</small></span><a href="#purchase">Go to checkout</a></div>
+</body>
+</html>
