@@ -62,28 +62,20 @@
       <ul class="specs"><li>TwinCAT 3</li><li>Local Windows installation</li><li>MCP-compatible AI integration</li></ul>
     </section>
 
-    <section class="demo" aria-labelledby="demo-title">
-      <div class="demo-top"><h2 id="demo-title">Inside a TwinCAT engineering session</h2><span>Illustrative demo</span></div>
-      <div class="demo-body">
-        <div class="conversation">
-          <p class="label">Engineer</p>
-          <blockquote>“Analyze my PLC project and explain how the conveyor state machine works.”</blockquote>
-          <p class="label">AI assistant</p>
-          <p>I’ve identified the conveyor control function block. Here’s an overview of its states and transitions.</p>
-          <ul class="progress"><li>PLC project structure analyzed</li><li>Function block inspected</li><li>State transitions identified</li><li>Engineering summary generated</li></ul>
-        </div>
-        <div class="inspector">
-          <p class="label">FB_ConveyorControl</p>
-          <div class="states" role="group" aria-label="Illustrative conveyor states">
-            <button type="button" aria-pressed="true" data-state="Idle · The test sequence is waiting for a start request.">Idle</button>
-            <span aria-hidden="true">↓</span>
-            <button type="button" aria-pressed="false" data-state="Running · The test sequence is active.">Running</button>
-            <span aria-hidden="true">↓</span>
-            <button type="button" aria-pressed="false" data-state="Stopped · The test sequence has ended.">Stopped</button>
-          </div>
-          <p class="state-note" id="state-note" aria-live="polite">Idle · The test sequence is waiting for a start request.</p>
-        </div>
+    <section class="product-demo" aria-labelledby="demo-title">
+      <div class="product-demo-header">
+        <h2 id="demo-title">Product demonstration</h2>
+        <a href="https://www.youtube.com/watch?v=YRL49G-Ko04">Watch on YouTube <span aria-hidden="true">↗</span></a>
       </div>
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/YRL49G-Ko04"
+        title="ekvip TwinCAT MCP Server product demonstration"
+        width="960"
+        height="540"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen></iframe>
     </section>
 
     <section class="content-section">
@@ -170,56 +162,31 @@
   </div>
 
   <aside class="purchase" id="purchase" aria-labelledby="purchase-title" tabindex="-1">
-    <div class="purchase-heading">
-      <p class="eyebrow">CHECKOUT PROTOTYPE</p>
-      <h2 id="purchase-title">ekvip TwinCAT MCP Server</h2>
-      <p class="price">€29.99 <span>/ month</span></p>
-      <p class="license">Monthly software subscription</p>
-    </div>
-    <form id="checkout" aria-describedby="test-notice">
-      <p class="test-notice" id="test-notice">Simulated checkout with prefilled test card details. Use a test email.</p>
-      <label for="order-email">Email address</label>
-      <input id="order-email" type="email" placeholder="engineer@example.com" autocomplete="off" required aria-describedby="email-help">
-      <small id="email-help">Your receipt and download link will be sent to this address in live checkout.</small>
-      <fieldset class="card-details" aria-describedby="test-notice">
-        <legend>Card details</legend>
-        <div class="card-field">
-          <label for="card-number">Card number</label>
-          <div class="field-with-icon">
-            <input id="card-number" type="text" value="4242 4242 4242 4242" readonly>
-            <span class="test-card-brand" aria-hidden="true">VISA</span>
-          </div>
-        </div>
-        <div class="card-fields-row">
-          <div class="card-field">
-            <label for="card-expiration">Expiration date</label>
-            <input id="card-expiration" type="text" value="12 / 30" readonly>
-          </div>
-          <div class="card-field">
-            <label for="card-code">Security code</label>
-            <div class="field-with-icon">
-              <input id="card-code" type="text" value="123" readonly>
-              <span class="security-code-icon" aria-hidden="true">123</span>
-            </div>
-          </div>
-        </div>
+    <div id="purchase-summary">
+      <p class="eyebrow">LOCAL WINDOWS SOFTWARE</p>
+      <h2 id="purchase-title">ekvip TC MCP Server</h2>
+      <fieldset class="plan-picker">
+        <legend>Subscription</legend>
+        <label><input type="radio" name="plan" value="month" checked><span>Monthly <strong>€9</strong></span></label>
+        <label><input type="radio" name="plan" value="year"><span>Yearly <strong>€90</strong></span></label>
       </fieldset>
-      <label for="billing-country">Country</label>
-      <div class="country-select">
-        <select id="billing-country" required>
-          <option value="">Select a country</option>
-          <option value="DE">Germany</option>
-          <option value="AT">Austria</option>
-          <option value="CH">Switzerland</option>
-          <option value="GB">United Kingdom</option>
-          <option value="US">United States</option>
-          <option value="other">Other country</option>
-        </select>
-      </div>
-      <dl class="totals"><div><dt>Monthly subscription</dt><dd>€29.99 / month</dd></div><div><dt>Applicable taxes</dt><dd>Calculated in live checkout</dd></div></dl>
-      <label class="agreement"><input type="checkbox" required><span>I accept the <a href="#test-terms">prototype purchase and license terms</a>.</span></label>
+      <p class="price"><span data-plan-price>€9 / month</span></p>
+      <p class="license">TwinCAT MCP integration for supported AI assistants.</p>
+      <ul class="purchase-includes">
+        <li>Windows MSI installer and local installation</li>
+        <li>Instant download after payment</li>
+        <li>No account required</li>
+      </ul>
+      <button class="pay" id="buy" type="button">Buy &amp; Download <span aria-hidden="true">→</span></button>
+      <p class="purchase-notes">Secure card payment via Stripe planned</p>
+      <a class="purchase-contact" href="#purchasing-contact">Licensing or purchasing questions?</a>
       <details class="test-scenarios">
         <summary>Choose a test scenario</summary>
+        <label for="checkout-preview">Checkout preview</label>
+        <select id="checkout-preview">
+          <option value="popup">Popup</option>
+          <option value="expandable">Expandable card</option>
+        </select>
         <label for="test-scenario">Checkout outcome</label>
         <select id="test-scenario">
           <option value="success">Successful payment</option>
@@ -230,11 +197,117 @@
           <option value="email-pending">Receipt email pending</option>
         </select>
       </details>
-      <button class="pay" type="submit">Pay &amp; Download <span aria-hidden="true">→</span></button>
-    </form>
-    <p class="purchase-notes">Secure checkout planned · Windows MSI after payment · No website account required</p>
-    <details id="test-terms"><summary>Prototype terms</summary><p>This test creates no order or license, charges no money and sends no email.</p></details>
-    <a class="purchase-contact" href="#purchasing-contact">Licensing, purchasing or invoice questions?</a>
+    </div>
+    <div id="inline-checkout" hidden></div>
+    <dialog id="checkout-dialog" aria-labelledby="checkout-heading"></dialog>
+    <section id="checkout-content" class="checkout-content" hidden>
+      <div class="checkout-header">
+        <div>
+          <p class="eyebrow" id="checkout-header-title">CHECKOUT PROTOTYPE</p>
+          <h2 id="checkout-heading" tabindex="-1">Complete your purchase</h2>
+          <p class="checkout-product">ekvip TC MCP Server · <strong data-plan-price>€9 / month</strong></p>
+        </div>
+        <button class="checkout-dismiss" id="close-checkout" type="button" aria-label="Close checkout">×</button>
+      </div>
+      <div class="checkout-body">
+        <form id="checkout" aria-describedby="test-notice">
+          <p class="test-notice" id="test-notice">Simulated checkout with prefilled test card details. Use a test email.</p>
+          <div class="checkout-field">
+            <label for="checkout-plan">Subscription</label>
+            <select id="checkout-plan">
+              <option value="month">Monthly · €9</option>
+              <option value="year">Yearly · €90</option>
+            </select>
+          </div>
+          <div class="checkout-field">
+            <label for="order-email">Email address</label>
+            <input id="order-email" type="email" placeholder="engineer@example.com" autocomplete="off" required aria-describedby="email-help">
+            <small id="email-help">Your receipt and download link will be sent to this email address.</small>
+          </div>
+          <fieldset class="card-details" aria-describedby="test-notice">
+            <legend>Card details</legend>
+            <div class="card-field">
+              <label for="card-number">Card number</label>
+              <div class="field-with-icon">
+                <input id="card-number" type="text" value="4242 4242 4242 4242" readonly>
+                <span class="test-card-brand" aria-hidden="true">VISA</span>
+              </div>
+            </div>
+            <div class="card-fields-row">
+              <div class="card-field">
+                <label for="card-expiration">Expiration date</label>
+                <input id="card-expiration" type="text" value="12 / 30" readonly>
+              </div>
+              <div class="card-field">
+                <label for="card-code">Security code</label>
+                <div class="field-with-icon">
+                  <input id="card-code" type="text" value="123" readonly>
+                  <span class="security-code-icon" aria-hidden="true">123</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="checkout-field">
+            <label for="billing-country">Country</label>
+            <div class="country-select">
+              <select id="billing-country" required>
+                <option value="">Select a country</option>
+                <option value="DE">Germany</option>
+                <option value="AT">Austria</option>
+                <option value="CH">Switzerland</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="other">Other country</option>
+              </select>
+            </div>
+          </div>
+          <dl class="totals">
+            <div><dt>Test total</dt><dd data-plan-price>€9 / month</dd></div>
+            <div><dt>Applicable taxes</dt><dd>Calculated in live checkout</dd></div>
+          </dl>
+          <label class="agreement"><input type="checkbox" required><span>I accept the <a href="#test-terms">prototype purchase and license terms</a>.</span></label>
+          <p id="checkout-error" class="checkout-error" role="alert" hidden></p>
+          <button class="pay" type="submit">Pay &amp; Download <span aria-hidden="true">→</span></button>
+        </form>
+        <details id="test-terms"><summary>Prototype terms</summary><p>This test creates no order or license, charges no money and sends no email.</p></details>
+        <p class="purchase-notes" id="checkout-reassurance">Secure card payment via Stripe planned.</p>
+        <div id="payment-progress" class="payment-progress" hidden>
+          <p role="status">Payment processing. We’re checking your test payment.</p>
+          <button type="button" class="text-action" id="cancel-payment">Cancel test payment</button>
+        </div>
+        <section id="checkout-success" hidden aria-labelledby="success-title">
+          <p class="success-indicator"><span aria-hidden="true">✓</span> Test payment successful</p>
+          <h3 id="success-title" tabindex="-1">Your TwinCAT MCP Server is ready.</h3>
+          <dl class="totals order-recap">
+            <div><dt>Test order</dt><dd id="checkout-order"></dd></div>
+            <div><dt>Subscription</dt><dd data-plan-price>€9 / month</dd></div>
+            <div><dt>Charged</dt><dd>€0 (test)</dd></div>
+          </dl>
+          <button class="pay" id="get-installer" type="button">Download for Windows (.msi) <span aria-hidden="true">↓</span></button>
+          <p id="installer-status" class="purchase-notes" role="status"></p>
+          <p id="receipt-status" class="receipt-note"></p>
+          <ol class="install-steps">
+            <li>Download the MSI installer.</li>
+            <li>Open the installer and follow the installation wizard.</li>
+            <li>Connect your supported AI assistant to TwinCAT.</li>
+          </ol>
+          <details class="quick-start">
+            <summary>Installation documentation</summary>
+            <p>Prototype quick-start. Install on a Windows engineering workstation with TwinCAT 3, then use the release configuration for your supported MCP client and verify the connection with a test project.</p>
+          </details>
+          <details>
+            <summary>Recover your download link</summary>
+            <form id="inline-recovery">
+              <label for="recovery-address">Order email address</label>
+              <input type="email" id="recovery-address" placeholder="engineer@example.com" required>
+              <button class="text-action" type="submit">Request link</button>
+              <p class="purchase-notes" id="recovery-result" role="status"></p>
+            </form>
+          </details>
+          <a class="purchase-contact" href="https://ekvip.com/en">Contact ekvip for support</a>
+        </section>
+      </div>
+    </section>
   </aside>
 </main>
 <footer class="site-footer" id="purchasing-contact">
@@ -242,6 +315,6 @@
   <p>Purchasing and licensing enquiries · <a href="https://ekvip.com/en">Visit ekvip</a></p>
   <small>Product and checkout prototype</small></div>
 </footer>
-<div class="mobile-purchase"><span>€29.99 <small>per month</small></span><a href="#purchase">Go to checkout</a></div>
+<div class="mobile-purchase"><span data-plan-price>€9 / month</span><button id="mobile-buy" type="button">Buy &amp; Download</button></div>
 </body>
 </html>
